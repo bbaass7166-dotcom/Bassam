@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام مطابقة حجم الشاشة وموقع الكاميرا</title>
     <link rel="stylesheet" href="style.css">
-    <title>Phone Screen Size and Front Camera Location Matching</title>
 </head>
-<body>
-    <h1>Phone Screen Size and Front Camera Location Matching System</h1>
+<body dir="rtl">
+    <div class="container">
+        <div class="header">
+            <h1>🔍 نظام مطابقة الهواتف</h1>
+            <p class="subtitle">ابحث عن موديلات الهواتف المتطابقة في الحجم والكاميرا</p>
+        </div>
+
+        <div class="search-section">
+            <div class="search-group">
+                <label for="model">🔎 ابحث عن طراز الهاتف:</label>
+                <input type="text" id="model" placeholder="مثال: iPhone 13, Samsung Galaxy A12">
+            </div>
+
+            <div class="search-group">
+                <label for="screenSize">📏 حجم الشاشة (بوصة):</label>
+                <input type="number" id="screenSize" placeholder="مثال: 6.1" step="0.1" min="3" max="8">
+            </div>
+
+            <div class="search-group">
+                <label for="cameraPosition">📷 موقع الكاميرا الأمامية:</label>
+                <select id="cameraPosition">
+                    <option value="">اختر الموقع</option>
+                    <option value="top-center">أعلى المنتصف</option>
+                    <option value="top-left">أعلى اليسار</option>
+                    <option value="top-right">أعلى اليمين</option>
+                    <option value="notch">فتحة (Notch)</option>
+                    <option value="punch-hole">ثقب (Punch Hole)</option>
+                </select>
+            </div>
+
+            <div class="search-group">
+                <label for="brand">🏢 الشركة المصنعة:</label>
+                <select id="brand">
+                    <option value="">جميع الشركات</option>
+                    <option value="Samsung">سامسونج</option>
+                    <option value="Apple">أبل</option>
+                    <option value="Huawei">هواوي</option>
+                    <option value="Xiaomi">شاومي</option>
+                    <option value="Redmi">ريدمي</option>
+                    <option value="ZTE">ZTE</option>
+                    <option value="Infinix">إنفينيكس</option>
+                    <option value="itel">آيتل</option>
+                    <option value="TCL">TCL</option>
+                    <option value="LG">LG</option>
+                    <option value="Tecno">تكنو</option>
+                    <option value="Coolpad">كولباد</option>
+                    <option value="Jomy">جومي</option>
+                </select>
+            </div>
+
+            <button id="searchButton" class="search-btn">🔍 ابحث الآن</button>
+            <button id="resetButton" class="reset-btn">↻ إعادة تعيين</button>
+        </div>
+
+        <div id="results" class="results-section">
+            <h2>📱 نتائج البحث</h2>
+            <div id="resultsList" class="results-list">
+                <p class="no-results">اضغط على "ابحث الآن" للبدء</p>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
